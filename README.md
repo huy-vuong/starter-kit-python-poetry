@@ -1,3 +1,5 @@
+![GitHub Actions Build Status](https://github.com/yanz777/react-blank-project/actions/workflows/build.yml/badge.svg)
+
 # starter-kit-python-poetry
 For starting new Python projects managed in Poetry
 

@@ -1,0 +1,25 @@
+name: Build
+on: [pull_request, push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Use Python 3.10
+        uses: actions/setup-python@v1
+        with:
+          python-version: "3.10"
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
+      - name: Install dependencies
+        run: poetry install
+        if: steps.cache.outputs.cache-hit != 'true'
+      - name: Type check and lint
+        run: poetry run pyright
+      - name: Format
+        run: poetry run black --check .
+      - name: Test
+        run: poetry run coverage run -m pytest --doctest-modules
+      - name: Print coverage report
+        run: poetry run coverage report
