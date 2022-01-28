@@ -5,7 +5,7 @@ description = ""
 authors = ["Huy Vuong <huy-vuong@users.noreply.github.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.10"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"
