@@ -9,7 +9,7 @@ python = "^3.10"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"
-pyright = "^0.0.13"
+pyright = "^1.1.273"
 black = "^22.1"
 coverage = "^6.3"
 
